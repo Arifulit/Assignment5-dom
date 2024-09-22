@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+
+    <!-- Font: Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Link: Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/f811dd765f.js" crossorigin="anonymous"></script>
+
+    <!-- Link: TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBeige: 'rgb(249, 247, 243)',
+                        btnColor: 'rgba(17,17,17,0.05)',
+
+                        //     secondary: '#030712',
+                        //     couponOne: '#ffbf0f',
+                        //     couponTwo: '#f78c9c',
+                        //     mobileMenu: '#f7f8f8',
+                        //    buttonColor: 'rgba(29, 209, 0, 0.15)',
+                    },
+                    fontFamily: {
+                        Lexend: 'Lexend',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+</head>
+
+<body class="bg-white">
+
+    <!-- Navbar -->
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Donate Bangladesh</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <div class="navber-main backdrop-blur  w-full z-[10] transition-all duration-500 ease-in-out"> 
+            <nav class="bg-customBeige text-gray-800 p-4  top-0 z-50">
+                <div class="container mx-auto flex items-center justify-between">
+                    <!-- Left Section: Blog Button -->
+                    <div class="flex items-center">
+                        <a href="#"
+                            class="flex justify-center items-center font-bold gap-2 w-[110px] h-[49px] px-8 py-3 rounded-lg bg-[#b4f409]">
+                            Blog
+                        </a>
+                    </div>
+        
+                    <!-- Center Section: Logo -->
+                    <div class="flex items-center justify-between gap-[10px]">
+                        <div class="text-2xl font-bold">
+                            <img src="assets/logo.png" alt="Logo">
+                        </div>
+                        <div class="text-lg font-bold">Donate Bangladesh</div>
+                    </div>
+        
+                    <!-- Right Section: Account Balance and Coin Icon -->
+                    <div class="flex items-center space-x-2">
+                        <!-- Coin Icon (Replace with an actual icon) -->
+                        <div>
+                            <img src="assets/coin.png" alt="Coin">
+                        </div>
+                        <span class="font-bold">5500 BDT</span>
+                    </div>
+                </div>
+            </nav>
+        
+            <!-- Buttons Section: Donation and History -->
+            <div class="flex justify-center mt-12 space-x-8">
+                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Donation</a>
+                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">History</a>
+            </div>
+        </div>
+        
+        
+
+        <!-- Banner Section start -->
+        <div class=" flex flex-col items-center gap-6">
+            <!-- Donation Card 1 -->
+            <div class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row">
+                <img src="assets/noakhali.png" alt="Donation Image" class="w-full h-[389px] md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
+                <div class="w-full md:w-1/2 p-4 flex flex-col justify-between">
+                    <div>
+                        <button
+                            class="w-[110px] h-[44px] flex flex-row rounded-[8px] bg-btnColor justify-start items-center gap-2 p-[10px_16px] flex-none order-0 flex-grow-0 mb-4">
+                            <img src="assets/coin.png" alt="">
+                            <span class="text-sm font-semibold">0 BDT</span>
+                        </button>
+            
+                        <h1 class="text-[rgb(17,17,17)] font-lexend text-[20px] font-bold leading-[30px] tracking-normal text-left mb-4">
+                            Donate for Flood at Noakhali, Bangladesh</h1>
+                        <p class="text-gray-600 mb-4">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    </div>
+                    <input type="number" id="donation-amount" placeholder="Enter your amount"
+                        class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
+            
+                    <button class=" mb-10 w-full h-[57px] flex flex-row justify-center items-center rounded-lg bg-[rgb(180,244,97)] gap-2 p-4 text-black font-bold">
+                        Donate Now
+                    </button>
+                </div>
+            </div>
+            
+
+
+            <!-- Donation Card 2 -->
+            <div class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row">
+                <img src="assets/feni.png" alt="Donation Image" class="w-full h-[389px] md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
+                <div class="w-full md:w-1/2 p-4 flex flex-col justify-between">
+                    <div>
+                        <button
+                            class="w-[110px] h-[44px] flex flex-row rounded-[8px] bg-btnColor justify-start items-center gap-2 p-[10px_16px] flex-none order-0 flex-grow-0 mb-4">
+                            <img src="assets/coin.png" alt="">
+                            <span class="text-sm font-semibold">600 BDT</span>
+                        </button>
+            
+                        <h1 class="text-[rgb(17,17,17)] font-lexend text-[20px] font-bold leading-[30px] tracking-normal text-left mb-4">
+                            Donate for Flood Relief in Feni,Bangladesh</h1>
+                        <p class="text-gray-600 mb-4">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    </div>
+                    <input type="number" id="donation-amount" placeholder="Enter your amount"
+                        class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
+            
+                    <button class="w-full h-[57px] flex flex-row justify-center items-center rounded-lg bg-[rgb(180,244,97)] gap-2 p-4 text-black font-bold">
+                        Donate Now
+                    </button>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Donation Card 3 -->
+            <div class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row">
+                <img src="assets/quota-protest.png" alt="Donation Image" class="w-full h-[389px] md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
+                <div class="w-full md:w-1/2 p-4 flex flex-col justify-between">
+                    <div>
+                        <button
+                            class="w-[110px] h-[44px] flex flex-row rounded-[8px] bg-btnColor justify-start items-center gap-2 p-[10px_16px] flex-none order-0 flex-grow-0 mb-4">
+                            <img src="assets/coin.png" alt="">
+                            <span class="text-sm font-semibold">2400 BDT</span>
+                        </button>
+            
+                        <h1 class="text-[rgb(17,17,17)] font-lexend text-[20px] font-bold leading-[30px] tracking-normal text-left mb-4">
+                            Aid for Injured in the Quota Movement</h1>
+                        <p class="text-gray-600 mb-4">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                    </div>
+                    <input type="number" id="donation-amount" placeholder="Enter your amount"
+                        class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
+            
+                    <button class="w-full h-[57px] flex flex-row justify-center items-center rounded-lg bg-[rgb(180,244,97)] gap-2 p-4 text-black font-bold">
+                        Donate Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- Banner Section end -->
+
+
+    </body>
+
+    </html>
+
+
+</body>
+
+</html>
