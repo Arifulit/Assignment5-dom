@@ -122,3 +122,15 @@ successModal.addEventListener('click', function (event) {
 // Show donation section by default
 donationSection.classList.remove('hidden');
 historySection.classList.add('hidden');
+
+
+
+ // Listen for scroll events
+ window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar-main');
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled'); // Add class when scrolled
+    } else {
+        navbar.classList.remove('scrolled'); // Remove class when at top
+    }
+});

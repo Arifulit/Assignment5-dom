@@ -34,3 +34,12 @@
     color: white; /* Text color for active button */
     border: none; /* Remove border for active button */
 }
+
+.navbar-main {
+    backdrop-filter: blur(60px); /* Apply blur effect */
+    transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.navbar-main.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Background color when scrolled */
+}
