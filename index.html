@@ -47,7 +47,7 @@
             <div class="container mx-auto flex items-center justify-between">
                 <!-- Left Section: Blog Button -->
                 <div class="flex items-center">
-                    <a href="#"
+                    <a href="blog.html"
                         class="flex justify-center items-center font-bold gap-2 w-[110px] h-[49px] px-8 py-3 rounded-lg bg-[#b4f409]">
                         Blog
                     </a>
@@ -84,15 +84,13 @@
 
     <!-- History Section -->
     <div id="history-section" class="bg-white shadow-md rounded-lg p-4 hidden">
-
         <ul id="history-list" class="space-y-2">
             <!-- History items will be added here dynamically -->
         </ul>
     </div>
-
-
+    
     <!-- Banner Section start -->
-    <div class=" flex flex-col items-center gap-6">
+    <div class="flex flex-col items-center gap-6">
         <!-- Donation Card 1 -->
         <div id="donation-section" class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row">
             <img src="assets/noakhali.png" alt="Donation Image"
@@ -104,7 +102,7 @@
                         <img src="assets/coin.png" alt="">
                         <div class="text-sm font-semibold"> <span id="account-balance">0</span> BDT</div>
                     </button>
-
+    
                     <h1
                         class="text-[rgb(17,17,17)] font-lexend text-[20px] font-bold leading-[30px] tracking-normal text-left mb-4">
                         Donate for Flood at Noakhali, Bangladesh</h1>
@@ -115,16 +113,14 @@
                 </div>
                 <input type="number" id="input-add-money" placeholder="Enter your amount"
                     class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
-
+    
                 <button id="btn-add-money"
-                    class=" mb-10 w-full h-[57px] flex flex-row justify-center items-center rounded-lg bg-[rgb(180,244,97)] gap-2 p-4 text-black font-bold">
+                    class="mb-10 w-full h-[57px] flex flex-row justify-center items-center rounded-lg bg-[rgb(180,244,97)] gap-2 p-4 text-black font-bold">
                     Donate Now
                 </button>
             </div>
         </div>
-
-
-
+    
         <!-- Donation Card 2 -->
         <div class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row">
             <img src="assets/feni.png" alt="Donation Image"
@@ -136,10 +132,10 @@
                         <img src="assets/coin.png" alt="">
                         <span class="text-sm font-semibold">600 BDT</span>
                     </button>
-
+    
                     <h1
                         class="text-[rgb(17,17,17)] font-lexend text-[20px] font-bold leading-[30px] tracking-normal text-left mb-4">
-                        Donate for Flood Relief in Feni,Bangladesh</h1>
+                        Donate for Flood Relief in Feni, Bangladesh</h1>
                     <p class="text-gray-600 mb-4">The recent floods in Feni have devastated local communities, leading
                         to severe disruption and loss. Your generous donation will help provide immediate aid, including
                         food, clean water, and medical supplies, to those affected by this calamity. Together, we can
@@ -149,19 +145,14 @@
                 </div>
                 <input type="number" id="donation-amount" placeholder="Enter your amount"
                     class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
-
+    
                 <button
                     class="w-full h-[57px] flex flex-row justify-center items-center rounded-lg bg-[rgb(180,244,97)] gap-2 p-4 text-black font-bold">
                     Donate Now
                 </button>
             </div>
         </div>
-
-
-
-
-
-
+    
         <!-- Donation Card 3 -->
         <div class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row">
             <img src="assets/quota-protest.png" alt="Donation Image"
@@ -173,7 +164,7 @@
                         <img src="assets/coin.png" alt="">
                         <span class="text-sm font-semibold">2400 BDT</span>
                     </button>
-
+    
                     <h1
                         class="text-[rgb(17,17,17)] font-lexend text-[20px] font-bold leading-[30px] tracking-normal text-left mb-4">
                         Aid for Injured in the Quota Movement</h1>
@@ -187,25 +178,26 @@
                 </div>
                 <input type="number" id="donation-amount" placeholder="Enter your amount"
                     class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
-
+    
                 <button
                     class="w-full h-[57px] flex flex-row justify-center items-center rounded-lg bg-[rgb(180,244,97)] gap-2 p-4 text-black font-bold">
                     Donate Now
                 </button>
             </div>
         </div>
-
     </div>
+    
     <!-- Banner Section end -->
 
     <!-- Modal section -->
     <div id="success-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white rounded-lg p-4 w-1/3">
-            <h1 class="text-lg font-bold mb-2">Congrates</h1>
+        <div class="bg-white rounded-lg p-4 w-11/12 md:w-1/3">
+            <h1 class="text-lg font-bold mb-2">Congrats</h1>
             <p id="modal-message">Your donation was processed successfully.</p>
-            <button id="close-modal" class="mt-4 bg-blue-500 text-white rounded p-2">Close</button>
+            <button id="close-modal" class="mt-4 bg-blue-500 text-white rounded p-2 w-full">Close</button>
         </div>
     </div>
+    
 
     <script src="js/donate.js"></script>
     <!-- <script src="js/giveUp.js"></script> -->

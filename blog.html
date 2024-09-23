@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Donate Bangladesh</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -25,12 +25,16 @@
     <div class="navbar-main sticky top-0 w-full z-10">
         <nav class="bg-transparent text-gray-800 p-4">
             <div class="container mx-auto flex items-center justify-between">
+
                 <div class="flex items-center">
-                    <a href="blog.html"
-                        class="flex justify-center items-center font-bold gap-2 w-[110px] h-[49px] px-8 py-3 rounded-lg bg-[#b4f409]">
-                        Blog
+                    <a href="index.html"
+                       class="flex justify-center items-center font-bold gap-2 w-[110px] h-[49px] px-8 py-3 rounded-lg"
+                       style="background-color: rgb(180, 244, 97);">
+                        Home
                     </a>
                 </div>
+                
+
                 <div class="flex items-center justify-between gap-2">
                     <div class="text-2xl font-bold">
                         <img src="assets/logo.png" alt="Logo" class="h-10">
@@ -57,45 +61,68 @@
 
                 <!-- Accordion Item 1 -->
                 <div>
-                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md" onclick="toggleAccordion('item1', this)">
+                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md"
+                        onclick="toggleAccordion('item1', this)">
                         <h2 class="text-xl font-semibold">1. What is the Document Object Model (DOM)?</h2>
-                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300" data-accordion="arrow"></i>
+                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300"
+                            data-accordion="arrow"></i>
                     </div>
                     <div id="item1" class="accordion-item p-4 border rounded-lg bg-gray-50">
-                        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing scripts to access and manipulate the content, structure, and styles of web pages. Essentially, it provides a way for programming languages to interact with HTML and XML documents.</p>
+                        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents
+                            the structure of a document as a tree of objects, allowing scripts to access and manipulate
+                            the content, structure, and styles of web pages. Essentially, it provides a way for
+                            programming languages to interact with HTML and XML documents.</p>
                     </div>
                 </div>
 
                 <!-- Accordion Item 2 -->
                 <div>
-                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md" onclick="toggleAccordion('item2', this)">
+                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md"
+                        onclick="toggleAccordion('item2', this)">
                         <h2 class="text-xl font-semibold">2. How do you select an element from the DOM?</h2>
-                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300" data-accordion="arrow"></i>
+                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300"
+                            data-accordion="arrow"></i>
                     </div>
                     <div id="item2" class="accordion-item p-4 border rounded-lg bg-gray-50">
-                        <p>You can select elements from the DOM using various methods such as <code>document.getElementById()</code>, <code>document.querySelector()</code>, or <code>document.getElementsByClassName()</code>. For example: <code>document.querySelector('.my-class')</code> selects the first element with the class "my-class".</p>
+                        <p>You can select elements from the DOM using various methods such as
+                            <code>document.getElementById()</code>, <code>document.querySelector()</code>, or
+                            <code>document.getElementsByClassName()</code>. For example:
+                            <code>document.querySelector('.my-class')</code> selects the first element with the class
+                            "my-class".</p>
                     </div>
                 </div>
 
                 <!-- Accordion Item 3 -->
                 <div>
-                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md" onclick="toggleAccordion('item3', this)">
-                        <h2 class="text-xl font-semibold">3. What is event delegation in the context of the DOM, and why is it useful?</h2>
-                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300" data-accordion="arrow"></i>
+                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md"
+                        onclick="toggleAccordion('item3', this)">
+                        <h2 class="text-xl font-semibold">3. What is event delegation in the context of the DOM, and why
+                            is it useful?</h2>
+                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300"
+                            data-accordion="arrow"></i>
                     </div>
                     <div id="item3" class="accordion-item p-4 border rounded-lg bg-gray-50">
-                        <p>Event delegation is a technique in which a single event listener is attached to a parent element instead of individual child elements. This is useful for improving performance and managing dynamically added elements. By using event delegation, you can handle events for multiple child elements with a single listener.</p>
+                        <p>Event delegation is a technique in which a single event listener is attached to a parent
+                            element instead of individual child elements. This is useful for improving performance and
+                            managing dynamically added elements. By using event delegation, you can handle events for
+                            multiple child elements with a single listener.</p>
                     </div>
                 </div>
 
                 <!-- Accordion Item 4 -->
                 <div>
-                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md" onclick="toggleAccordion('item4', this)">
-                        <h2 class="text-xl font-semibold">4. How do you manipulate an element's attributes and styles using the DOM?</h2>
-                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300" data-accordion="arrow"></i>
+                    <div class="accordion-header flex justify-between items-center bg-gray-200 p-4 rounded-lg shadow-md"
+                        onclick="toggleAccordion('item4', this)">
+                        <h2 class="text-xl font-semibold">4. How do you manipulate an element's attributes and styles
+                            using the DOM?</h2>
+                        <i class="fas fa-chevron-down text-gray-700 transition-transform duration-300"
+                            data-accordion="arrow"></i>
                     </div>
                     <div id="item4" class="accordion-item p-4 border rounded-lg bg-gray-50">
-                        <p>You can manipulate an element's attributes using methods like <code>element.setAttribute(name, value)</code> or by directly accessing the attribute properties. To change an element's styles, you can modify the <code>style</code> property, e.g., <code>element.style.color = 'red'</code> to change the text color to red.</p>
+                        <p>You can manipulate an element's attributes using methods like
+                            <code>element.setAttribute(name, value)</code> or by directly accessing the attribute
+                            properties. To change an element's styles, you can modify the <code>style</code> property,
+                            e.g., <code>element.style.color = 'red'</code> to change the text color to red.</p>
                     </div>
                 </div>
 
