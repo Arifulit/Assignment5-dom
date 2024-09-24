@@ -3,7 +3,7 @@
 }
 
 .show-modal {
-    display: flex; /* Show modal as flex */
+    display: flex;
 }
 
 
@@ -11,26 +11,26 @@
     display: none;
 }
 
-/* Inactive button styles */
+
 .inactive {
-    background-color: transparent; /* No background color */
-    color: black; /* Default text color */
-    border: 1px solid gray; /* 1px solid gray border */
-    border-radius: 1px; /* Border radius 1px */
+    background-color: transparent; 
+    color: black; 
+    border: 1px solid gray; 
+    border-radius: 1px; 
 }
 
-/* Active button styles */
+
 .active {
-    background-color: rgb(180, 244, 97); /* Active background color */
-    color: white; /* Text color for active button */
-    border: none; /* Remove border for active button */
+    background-color: rgb(180, 244, 97); 
+    color: white; 
+    border: none; 
 }
 
 .navbar-main {
-    backdrop-filter: blur(60px); /* Apply blur effect */
-    transition: background-color 0.5s ease; /* Smooth transition for background color */
+    backdrop-filter: blur(60px); 
+    transition: background-color 0.5s ease; 
 }
 
 .navbar-main.scrolled {
-    background-color: rgba(255, 255, 255, 0.9); /* Background color when scrolled */
+    background-color: rgba(255, 255, 255, 0.9); 
 }

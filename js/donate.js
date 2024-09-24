@@ -106,7 +106,7 @@ donateButtons.forEach((donateButton, index) => {
     });
 });
 
-// Show donation section by default
+
 donationSection.classList.remove('hidden');
 historySection.classList.add('hidden');
 
