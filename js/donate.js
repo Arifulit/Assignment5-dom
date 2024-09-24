@@ -1,12 +1,13 @@
 // Get elements
-const donateButton = document.getElementById('btn-add-money');
+const donateButtons = document.querySelectorAll('.btn-add-money');
+const inputAddMoneyElements = document.querySelectorAll('.input-add-money');
+const accountBalances = document.querySelectorAll('.account-balance');
 const currentBalanceElement = document.getElementById('current-balance');
-const accountBalanceElement = document.getElementById('account-balance');
-const inputAddMoneyElement = document.getElementById('input-add-money');
 const modalContainer = document.getElementById('modal-container');
+const modalMessage = document.getElementById('modal-message');
 const closeModalButtons = document.querySelectorAll('.close-modal');
 
-const donationSection = document.getElementById('donation-section');
+const donationSection = document.querySelector('.donation-section');
 const historySection = document.getElementById('history-section');
 const btnDonation = document.getElementById('btn-donation');
 const btnHistory = document.getElementById('btn-history');
@@ -59,47 +60,50 @@ function loadHistory() {
     }
 }
 
-// Handle Donate Now button click
-donateButton.addEventListener('click', function () {
-    const moneyValue = parseFloat(inputAddMoneyElement.value);
+// Handle Donate Now button click for each card
+donateButtons.forEach((donateButton, index) => {
+    donateButton.addEventListener('click', function () {
+        const moneyValue = parseFloat(inputAddMoneyElements[index].value);
+        const accountBalanceElement = accountBalances[index];
 
-    if (isNaN(moneyValue) || moneyValue <= 0) {
-        alert('Please enter a valid amount.');
-        return;
-    }
+        if (isNaN(moneyValue) || moneyValue <= 0) {
+            alert('Please enter a valid amount.');
+            return;
+        }
 
-    // Get the current balances
-    let currentBalance = parseFloat(currentBalanceElement.innerText);
-    let accountBalance = parseFloat(accountBalanceElement.innerText);
+        // Get the current balances
+        let currentBalance = parseFloat(currentBalanceElement.innerText);
+        let accountBalance = parseFloat(accountBalanceElement.innerText);
 
-    // Check if there's enough balance to donate
-    if (moneyValue > currentBalance) {
-        alert('You do not have enough money to donate.');
-        return;
-    }
+        // Check if there's enough balance to donate
+        if (moneyValue > currentBalance) {
+            alert('You do not have enough money to donate.');
+            return;
+        }
 
-    // Update the balances
-    currentBalance -= moneyValue; // Subtract from current balance
-    accountBalance += moneyValue;  // Add to account balance
+        // Update the balances
+        currentBalance -= moneyValue; // Subtract from current balance
+        accountBalance += moneyValue;  // Add to account balance
 
-    // Update the displayed balances
-    currentBalanceElement.innerText = currentBalance.toFixed(2); // Update current balance
-    accountBalanceElement.innerText = accountBalance.toFixed(2);   // Update account balance
+        // Update the displayed balances
+        currentBalanceElement.innerText = currentBalance.toFixed(2); // Update current balance
+        accountBalanceElement.innerText = accountBalance.toFixed(2);   // Update account balance
 
-    // Clear the input field after the action
-    inputAddMoneyElement.value = '';
+        // Clear the input field after the action
+        inputAddMoneyElements[index].value = '';
 
-    // Create a donation object
-    const dateTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
-    const donation = { amount: moneyValue, date: dateTime };
+        // Create a donation object
+        const dateTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
+        const donation = { amount: moneyValue, date: dateTime };
 
-    // Save the donation to localStorage
-    let donations = JSON.parse(localStorage.getItem('donations')) || [];
-    donations.push(donation);
-    localStorage.setItem('donations', JSON.stringify(donations));
+        // Save the donation to localStorage
+        let donations = JSON.parse(localStorage.getItem('donations')) || [];
+        donations.push(donation);
+        localStorage.setItem('donations', JSON.stringify(donations));
 
-    
-    showModal();
+        // Show modal with success message
+        showModal();
+    });
 });
 
 // Show donation section by default
@@ -140,15 +144,3 @@ document.addEventListener('keydown', (event) => {
         closeModal();
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-

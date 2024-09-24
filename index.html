@@ -59,12 +59,14 @@
                 </div>
 
                 <!-- Right Section: Account Balance and Coin Icon -->
+                 <div class="current-balance-display">
                 <div class="flex items-center space-x-2">
                     <div>
                         <img src="assets/coin.png" alt="Coin">
                     </div>
                     <div class="font-bold"> <span id="current-balance">5500</span> BDT</div>
                 </div>
+             </div>
             </div>
         </nav>
 
@@ -73,8 +75,6 @@
             <button id="btn-donation" class="px-4 py-2 rounded-md inactive">Donation</button>
             <button id="btn-history" class="px-4 py-2 rounded-md inactive">History</button>
         </div>
-        
-        
     </div>
 
     <!-- History Section -->
@@ -87,81 +87,70 @@
     <!-- Banner Section start -->
     <div class="container mx-auto flex flex-col items-center gap-6">
         <!-- Donation Card 1 -->
-        <div id="donation-section" class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row max-w-6xl mx-auto mt-10">
-            <img src="assets/noakhali.png" alt="Donation Image"
-                class="w-full h-[389px] md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
+        <div class="donation-section bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row max-w-6xl mx-auto mt-10">
+            <img src="assets/noakhali.png" alt="Donation Image" class="w-full md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
             <div class="w-full md:w-1/2 p-4 flex flex-col justify-between">
                 <div>
-                    <button class="w-[120px] h-[44px] flex flex-row rounded-[8px] bg-gray-200 justify-start items-center gap-2 p-[10px_16px] mb-4">
-                        <img src="assets/coin.png" alt="">
-                        <div class="text-sm font-semibold"> <span id="account-balance">0</span> BDT</div>
+                    <button class="account-button w-[120px] h-[44px] flex flex-row rounded-[8px] bg-gray-200 justify-start items-center gap-2 p-[10px_16px] mb-4">
+                        <img src="assets/coin.png" alt="Coin" />
+                        <div class="text-sm font-semibold"> <span class="account-balance">0</span> BDT</div>
                     </button>
-    
+
                     <h1 class="text-gray-900 font-lexend text-2xl font-bold leading-[30px] tracking-normal mb-4">
                         Donate for Flood at Noakhali, Bangladesh
                     </h1>
-                    <p class="text-gray-600 mb-4">The floods in Noakhali have caused widespread destruction, severely impacting homes and infrastructure. Your donations will provide critical supplies like food, clean water, and medical aid to those in need. Every contribution, no matter how small, helps support the relief efforts, offering hope and assistance to the affected community as they work to rebuild their lives and recover from the disaster.</p>
+                    <p class="text-gray-600 mb-4">The floods in Noakhali have devastated homes and infrastructure, leaving many in urgent need of assistance. Donations will help provide essential supplies such as food, clean water, and medical aid to affected communities, offering crucial relief during this crisis and helping them recover from the widespread destruction caused by the disaster.</p>
                 </div>
-                <input type="t" id="input-add-money" placeholder="Enter your amount"
-                    class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
-    
-                <button id="btn-add-money"
-                    class="w-full h-[57px] flex justify-center items-center rounded-lg bg-colorBtn text-black font-bold">
+                <input type="text" placeholder="Enter your amount" class="input-add-money border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
+
+                <button class="btn-add-money w-full h-[57px] flex justify-center items-center rounded-lg bg-colorBtn text-black font-bold">
                     Donate Now
                 </button>
             </div>
         </div>
+
     
         <!-- Donation Card 2 -->
-        <div id="donation-section" class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row max-w-6xl mx-auto mt-10">
-            <img src="assets/feni.png" alt="Donation Image"
-                class="w-full h-[389px] md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
+        <div class="donation-section bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row max-w-6xl mx-auto mt-10">
+            <img src="assets/feni.png" alt="Donation Image" class="w-full md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
             <div class="w-full md:w-1/2 p-4 flex flex-col justify-between">
                 <div>
-                    <button class="w-[130px] h-[44px] flex flex-row rounded-[8px] bg-gray-200 justify-start items-center gap-2 p-[10px_16px] mb-4">
-                        <img src="assets/coin.png" alt="">
-                        <div class="text-sm font-semibold"> <span id="account-balance">600</span> BDT</div>
+                    <button class="account-button w-[130px] h-[44px] flex flex-row rounded-[8px] bg-gray-200 justify-start items-center gap-2 p-[10px_16px] mb-4">
+                        <img src="assets/coin.png" alt="Coin" />
+                        <div class="text-sm font-semibold"> <span class="account-balance">600</span> BDT</div>
                     </button>
-    
+
                     <h1 class="text-gray-900 font-lexend text-2xl font-bold leading-[30px] tracking-normal mb-4">
-                        Donate for Flood Relief in Feni,Bangladesh
+                        Donate for Flood Relief in Feni, Bangladesh
                     </h1>
-                    <p class="text-gray-600 mb-4"> The recent floods in Feni have devastated entire communities, causing severe disruption and significant loss. Your donation can provide urgent relief, including food, clean water, and medical supplies, to those in desperate need. By contributing, you offer vital support in helping to rebuild lives and restore hope in the aftermath of this disaster. Every donation makes a meaningful difference, so please consider supporting the ongoing relief efforts and those affected.</p>
+                    <p class="text-gray-600 mb-4">The recent floods in Feni have caused widespread devastation, impacting entire communities and leaving many without basic necessities. Donations are urgently needed to provide critical relief, including food, clean water, and medical supplies to those in desperate need. Your support can make a significant difference in helping these communities recover from the severe damage and begin rebuilding their lives.</p>
                 </div>
-                <input type="t" id="input-add-money" placeholder="Enter your amount"
-                    class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
-    
-                <button id="btn-add-money"
-                    class="w-full h-[57px] flex justify-center items-center rounded-lg bg-colorBtn text-black font-bold">
+                <input type="text" placeholder="Enter your amount" class="input-add-money border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
+
+                <button class="btn-add-money w-full h-[57px] flex justify-center items-center rounded-lg bg-colorBtn text-black font-bold">
                     Donate Now
                 </button>
             </div>
         </div>
     
-
-
-
         <!-- Donation Card 3 -->
-        <div id="donation-section" class="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row max-w-6xl mx-auto mt-10">
-            <img src="assets/quota-protest.png" alt="Donation Image"
-                class="w-full h-[389px] md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
+        <div class="donation-section bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row max-w-6xl mx-auto mt-10">
+            <img src="assets/quota-protest.png" alt="Donation Image" class="w-full md:w-1/2 h-auto object-cover rounded-lg md:rounded-l-lg mb-4 md:mb-0" />
             <div class="w-full md:w-1/2 p-4 flex flex-col justify-between">
                 <div>
-                    <button class="w-[130px] h-[44px] flex flex-row rounded-[8px] bg-gray-200 justify-start items-center gap-2 p-[10px_16px] mb-4">
-                        <img src="assets/coin.png" alt="">
-                        <div class="text-sm font-semibold"> <span id="account-balance">2400</span> BDT</div>
+                    <button class="account-button w-[130px] h-[44px] flex flex-row rounded-[8px] bg-gray-200 justify-start items-center gap-2 p-[10px_16px] mb-4">
+                        <img src="assets/coin.png" alt="Coin" />
+                        <div class="text-sm font-semibold"> <span class="account-balance">2400</span> BDT</div>
                     </button>
-    
+
                     <h1 class="text-gray-900 font-lexend text-2xl font-bold leading-[30px] tracking-normal mb-4">
                         Aid for Injured in the Quota Movement
                     </h1>
-                    <p class="text-gray-600 mb-4"> The Quota movement has caused numerous injuries and hardship for many individuals. Your support is critical in providing medical aid, rehabilitation, and essential supplies to those affected. Every contribution helps ensure that these individuals receive the care and assistance they need during this challenging period. By donating, you can make a real difference in their recovery and alleviate their suffering. Please consider supporting these brave individuals in their time of need.</p>
+                    <p class="text-gray-600 mb-4">The Quota movement has resulted in many injuries, leaving affected individuals in urgent need of medical aid and rehabilitation. Your support can provide essential supplies, medical treatment, and rehabilitation services to help them recover. By donating, you can play a critical role in offering relief to those impacted by the movement, ensuring they receive the care and assistance they desperately need.</p>
                 </div>
-                <input type="t" id="input-add-money" placeholder="Enter your amount"
-                    class="border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
-    
-                <button id="btn-add-money"
-                    class="w-full h-[57px] flex justify-center items-center rounded-lg bg-colorBtn text-black font-bold">
+                <input type="text" placeholder="Enter your amount" class="input-add-money border border-gray-300 rounded bg-white p-3 w-full mb-4 focus:outline-none focus:ring focus:ring-blue-400" />
+
+                <button class="btn-add-money w-full h-[57px] flex justify-center items-center rounded-lg bg-colorBtn text-black font-bold">
                     Donate Now
                 </button>
             </div>
