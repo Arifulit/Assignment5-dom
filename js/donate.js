@@ -5,7 +5,6 @@ const accountBalanceElement = document.getElementById('account-balance');
 const inputAddMoneyElement = document.getElementById('input-add-money');
 const modalContainer = document.getElementById('modal-container');
 const closeModalButtons = document.querySelectorAll('.close-modal');
-const modalMessage = document.getElementById('modal-message');
 
 const donationSection = document.getElementById('donation-section');
 const historySection = document.getElementById('history-section');
@@ -99,8 +98,7 @@ donateButton.addEventListener('click', function () {
     donations.push(donation);
     localStorage.setItem('donations', JSON.stringify(donations));
 
-    // Show modal with success message
-    modalMessage.innerText = `Donation successful: ${moneyValue} BDT added.`;
+    
     showModal();
 });
 
@@ -151,8 +149,6 @@ document.addEventListener('keydown', (event) => {
 
 
 
-
-// button
 
 
 
