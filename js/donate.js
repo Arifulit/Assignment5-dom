@@ -28,7 +28,7 @@ btnDonation.addEventListener('click', function () {
     donationSection.classList.remove('hidden');
     historySection.classList.add('hidden');
     activateButton(btnDonation);  // Activate the Donation button
-});
+  });
 
 // Show history section and hide donation
 btnHistory.addEventListener('click', function () {
@@ -48,13 +48,13 @@ function loadHistory() {
 
     if (donations.length === 0) {
         historyList.innerHTML = '<li>No donations found.</li>';
-    } else {
+     } else {
         donations.forEach(donation => {
             const listItem = document.createElement('li');
             listItem.className = "p-4 border rounded-lg shadow-md bg-gray-50";
             listItem.innerHTML = `
-                <span class="text-black">${donation.amount} Taka is donated for famine-2024 at Feni, Bangladesh</span>
-                <br><small class="text-gray-500">Date: ${donation.date}</small>`;
+                <span class="text-black font-bold">${donation.amount} Taka is donated for famine-2024 at Feni, Bangladesh</span>
+                <br><small class="text-gray-500">Date: ${donation.date} GMT +0600 (Bangladesh Standard Time) </small>`;
             historyList.appendChild(listItem);
         });
     }
