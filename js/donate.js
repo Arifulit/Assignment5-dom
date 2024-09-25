@@ -13,6 +13,7 @@ const btnDonation = document.getElementById('btn-donation');
 const btnHistory = document.getElementById('btn-history');
 const historyList = document.getElementById('history-list');
 
+
 // Function to handle button activation
 function activateButton(button) {
     btnDonation.classList.remove('active');
@@ -34,6 +35,7 @@ btnHistory.addEventListener('click', function () {
     activateButton(btnHistory);  
     loadHistory();
 });
+
 
 // Function to load history from localStorage
 function loadHistory() {
@@ -106,12 +108,11 @@ window.addEventListener('scroll', function () {
 const showModal = () => {
     modalContainer.classList.remove('hidden');
 };
-// Function to close modal
+
 const closeModal = () => {
     modalContainer.classList.add('hidden');
 };
 
-// Event listeners to close modal on button click or click outside the modal
 closeModalButtons.forEach(closeBtn => closeBtn.addEventListener('click', closeModal));
 modalContainer.addEventListener('click', (event) => {
     if (event.target === event.currentTarget) {

@@ -23,7 +23,9 @@
 .active {
     background-color: rgb(180, 244, 97); 
     color: white; 
-    border: none; 
+    border: 1px solid gray; 
+    border-radius: 1px;
+
 }
 
 .navbar-main {
