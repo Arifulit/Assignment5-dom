@@ -15,11 +15,8 @@ const historyList = document.getElementById('history-list');
 
 // Function to handle button activation
 function activateButton(button) {
-    // Remove active class from all buttons
     btnDonation.classList.remove('active');
     btnHistory.classList.remove('active');
-    
-    // Add active class to the clicked button
     button.classList.add('active');
 }
 
@@ -27,25 +24,21 @@ function activateButton(button) {
 btnDonation.addEventListener('click', function () {
     donationSection.classList.remove('hidden');
     historySection.classList.add('hidden');
-    activateButton(btnDonation);  // Activate the Donation button
+    activateButton(btnDonation);  
   });
 
 // Show history section and hide donation
 btnHistory.addEventListener('click', function () {
     donationSection.classList.add('hidden');
     historySection.classList.remove('hidden');
-    activateButton(btnHistory);  // Activate the History button
-
-    // Load history from localStorage
+    activateButton(btnHistory);  
     loadHistory();
 });
 
 // Function to load history from localStorage
 function loadHistory() {
-    historyList.innerHTML = ''; // Clear previous history items
-
+    historyList.innerHTML = ''; 
     const donations = JSON.parse(localStorage.getItem('donations')) || [];
-
     if (donations.length === 0) {
         historyList.innerHTML = '<li>No donations found.</li>';
      } else {
@@ -70,42 +63,31 @@ donateButtons.forEach((donateButton, index) => {
             alert('Please enter a valid amount.');
             return;
         }
-
-        // Get the current balances
         let currentBalance = parseFloat(currentBalanceElement.innerText);
         let accountBalance = parseFloat(accountBalanceElement.innerText);
 
-        // Check if there's enough balance to donate
         if (moneyValue > currentBalance) {
             alert('You do not have enough money to donate.');
             return;
         }
 
-        // Update the balances
-        currentBalance -= moneyValue; // Subtract from current balance
-        accountBalance += moneyValue;  // Add to account balance
+        currentBalance -= moneyValue; 
+        accountBalance += moneyValue; 
 
-        // Update the displayed balances
-        currentBalanceElement.innerText = currentBalance.toFixed(2); // Update current balance
-        accountBalanceElement.innerText = accountBalance.toFixed(2);   // Update account balance
-
-        // Clear the input field after the action
+        currentBalanceElement.innerText = currentBalance.toFixed(2); 
+        accountBalanceElement.innerText = accountBalance.toFixed(2);   
         inputAddMoneyElements[index].value = '';
 
-        // Create a donation object
         const dateTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
         const donation = { amount: moneyValue, date: dateTime };
 
-        // Save the donation to localStorage
         let donations = JSON.parse(localStorage.getItem('donations')) || [];
         donations.push(donation);
         localStorage.setItem('donations', JSON.stringify(donations));
 
-        // Show modal with success message
         showModal();
     });
 });
-
 
 donationSection.classList.remove('hidden');
 historySection.classList.add('hidden');
@@ -114,9 +96,9 @@ historySection.classList.add('hidden');
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.navbar-main');
     if (window.scrollY > 0) {
-        navbar.classList.add('scrolled'); // Add class when scrolled
+        navbar.classList.add('scrolled'); 
     } else {
-        navbar.classList.remove('scrolled'); // Remove class when at top
+        navbar.classList.remove('scrolled'); 
     }
 });
 
@@ -124,7 +106,6 @@ window.addEventListener('scroll', function () {
 const showModal = () => {
     modalContainer.classList.remove('hidden');
 };
-
 // Function to close modal
 const closeModal = () => {
     modalContainer.classList.add('hidden');
@@ -138,7 +119,6 @@ modalContainer.addEventListener('click', (event) => {
     }
 });
 
-// Close modal on Escape key press
 document.addEventListener('keydown', (event) => {
     if (event.key === "Escape") {
         closeModal();
